@@ -1,16 +1,5 @@
-import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,11 +9,50 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`antialiased scroll-smooth`}>
         {children}
+        {/* whats app button */}
+        <FloatingButtons />
       </body>
     </html>
   );
 }
+
+const FloatingButtons = () => {
+  const whatsappnumber = "+918540077750";
+  const callnumber = "+918540077750";
+
+  return (
+    <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10 flex flex-col items-end gap-2 z-30">
+      {/* WhatsApp Button */}
+      <a
+        href={`https://wa.me/${whatsappnumber}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group bg-green-500 flex items-center justify-center p-1 rounded-full overflow-hidden"
+      >
+        <span className="text-white opacity-0 text-sm max-w-0 lg:group-hover:opacity-100 lg:group-hover:max-w-32  lg:group-hover:px-5 whitespace-nowrap transition-all duration-300 ease-in-out">
+          WhatsApp
+        </span>
+        <span className="h-8 aspect-square rounded-full bg-white text-green-500 grid place-content-center">
+          <FaWhatsapp />
+        </span>
+      </a>
+
+      {/* Call Now Button */}
+      <a
+        href={`tel:${callnumber}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group bg-blue-500 flex items-center justify-center p-1 rounded-full overflow-hidden"
+      >
+        <span className="text-white opacity-0 text-sm max-w-0 lg:group-hover:opacity-100 lg:group-hover:max-w-32  lg:group-hover:px-5 whitespace-nowrap transition-all duration-300 ease-in-out">
+          Call Now
+        </span>
+        <span className="h-8 aspect-square rounded-full bg-white text-blue-500 grid place-content-center">
+          <FaPhoneAlt className="h-3"/>
+        </span>
+      </a>
+    </div>
+  );
+};
