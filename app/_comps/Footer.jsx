@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
@@ -8,32 +9,32 @@ const Footer = () => {
         <p>&copy; 2024 FurnitureCare. All rights reserved.</p>
         <div className="flex justify-center mt-4 space-x-6">
           {/* Facebook */}
-          <a
+          <Link
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-theme transition"
           >
             <FaFacebookF className="w-5 h-5" />
-          </a>
+          </Link>
           {/* Instagram */}
-          <a
+          <Link
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-theme transition"
           >
             <FaInstagram className="w-5 h-5" />
-          </a>
+          </Link>
           {/* Twitter */}
-          <a
+          <Link
             href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-theme transition"
           >
             <FaTwitter className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

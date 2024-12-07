@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -18,12 +19,12 @@ const HeroSection = () => {
             Revive and transform your furniture with our specialized services
             for homes and businesses.
           </p>
-          <a
+          <Link
             href="#services"
             className="px-6 py-3 text-lg font-medium text-black bg-theme rounded hover:bg-yellow-600 transition"
           >
             Explore Services
-          </a>
+          </Link>
         </div>
       </div>
     </section>

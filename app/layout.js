@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
@@ -25,7 +26,7 @@ const FloatingButtons = () => {
   return (
     <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10 flex flex-col items-end gap-2 z-30">
       {/* WhatsApp Button */}
-      <a
+      <Link
         href={`https://wa.me/${whatsappnumber}`}
         target="_blank"
         rel="noopener noreferrer"
@@ -37,10 +38,10 @@ const FloatingButtons = () => {
         <span className="h-8 aspect-square rounded-full bg-white text-green-500 grid place-content-center">
           <FaWhatsapp />
         </span>
-      </a>
+      </Link>
 
       {/* Call Now Button */}
-      <a
+      <Link
         href={`tel:${callnumber}`}
         target="_blank"
         rel="noopener noreferrer"
@@ -52,7 +53,7 @@ const FloatingButtons = () => {
         <span className="h-8 aspect-square rounded-full bg-white text-blue-500 grid place-content-center">
           <FaPhoneAlt className="h-3"/>
         </span>
-      </a>
+      </Link>
     </div>
   );
 };

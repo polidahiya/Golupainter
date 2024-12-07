@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -6,29 +7,27 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <a href="/" className="text-2xl font-bold text-gray-800">
+          <Link href="/" className="text-2xl font-bold text-gray-800">
             FurnitureCare
-          </a>
+          </Link>
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-theme">
+            <Link href="#home" className="text-gray-700 hover:text-theme">
               Home
-            </a>
-            <a href="#services" className="text-gray-700 hover:text-theme">
+            </Link>
+            <Link href="#services" className="text-gray-700 hover:text-theme">
               Services
-            </a>
-            <a href="#portfolio" className="text-gray-700 hover:text-theme">
+            </Link>
+            <Link href="#portfolio" className="text-gray-700 hover:text-theme">
               Portfolio
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-theme">
+            </Link>
+            <Link href="#contact" className="text-gray-700 hover:text-theme">
               Contact Us
-            </a>
+            </Link>
           </div>
           {/* Mobile Menu */}
           <div className="md:hidden">
-            <button className="text-gray-700 hover:text-theme">
-              ☰
-            </button>
+            <button className="text-gray-700 hover:text-theme">☰</button>
           </div>
         </div>
       </div>
